@@ -44,5 +44,8 @@ alias nginx-reload='cd /usr/local/nginx/sbin/; sudo ./nginx -s reload'
 alias nginx-reopen='cd /usr/local/nginx/sbin/; sudo ./nginx -s reopen'
 
 
+#git shourt cuts
+alias gitl='git log --graph --abbrev-commit --decorate --date=format:"%Y-%m-%d %H:%M:%S" --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n""          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)"'
+
 #to open vi IMproved when use command "vi/vim"
 alias vi='vim'
