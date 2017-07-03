@@ -5,3 +5,6 @@
 !.gitignore
 !.gitconfig
 !MyAPP.sh
+!.Xresources
+!.xinitrc
+!.bindkeysrc

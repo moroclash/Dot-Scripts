@@ -20,32 +20,32 @@ PS1="$purple\u$green\$(__git_ps1)$blue \W \$ $reset"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-#my conf to open folders
-alias me='cd /run/media/moroclash/computer\ scince/'
-alias meo='xdg-open /run/media/moroclash/computer\ scince/'
-alias me1='cd /run/media/moroclash/computer\ scince/CS/1/'
-alias me1o='xdg-open /run/media/moroclash/computer\ scince/CS/1/'
-alias me2='cd /run/media/moroclash/computer\ scince/CS/2/'
-alias me2o='xdg-open /run/media/moroclash/computer\ scince/CS/2/'
-alias me3='cd /run/media/moroclash/computer\ scince/CS/3/'
-alias me3o='xdg-open /run/media/moroclash/computer\ scince/CS/3/'
+##my conf to open folders
+#alias me='cd /run/media/moroclash/computer\ scince/'
+#alias meo='xdg-open /run/media/moroclash/computer\ scince/'
+#alias me1='cd /run/media/moroclash/computer\ scince/CS/1/'
+#alias me1o='xdg-open /run/media/moroclash/computer\ scince/CS/1/'
+#alias me2='cd /run/media/moroclash/computer\ scince/CS/2/'
+#alias me2o='xdg-open /run/media/moroclash/computer\ scince/CS/2/'
+#alias me3='cd /run/media/moroclash/computer\ scince/CS/3/'
+#alias me3o='xdg-open /run/media/moroclash/computer\ scince/CS/3/'
 
-#apache conf
-alias apache-start='cd /usr/local/apache/bin/; sudo ./apachectl start'
-alias apache-stop='cd /usr/local/apache/bin/; sudo ./apachectl stop'
-alias apache-restart='cd /usr/local/apache/bin/; sudo ./apachectl restart'
+##apache conf
+#alias apache-start='cd /usr/local/apache/bin/; sudo ./apachectl start'
+#alias apache-stop='cd /usr/local/apache/bin/; sudo ./apachectl stop'
+#alias apache-restart='cd /usr/local/apache/bin/; sudo ./apachectl restart'
 
 
-#nginX conf
-alias nginx-start='cd /usr/local/nginx/sbin/; sudo ./nginx'
-alias nginx-stop='cd /usr/local/nginx/sbin/; sudo ./nginx -s stop'
-alias nginx-reload='cd /usr/local/nginx/sbin/; sudo ./nginx -s reload'
+##nginX conf
+#alias nginx-start='cd /usr/local/nginx/sbin/; sudo ./nginx'
+#alias nginx-stop='cd /usr/local/nginx/sbin/; sudo ./nginx -s stop'
+#alias nginx-reload='cd /usr/local/nginx/sbin/; sudo ./nginx -s reload'
 #this to reopening the log files
-alias nginx-reopen='cd /usr/local/nginx/sbin/; sudo ./nginx -s reopen'
+#alias nginx-reopen='cd /usr/local/nginx/sbin/; sudo ./nginx -s reopen'
 
 
 #git shourt cuts
 alias gitl='git log --graph --abbrev-commit --decorate --date=format:"%Y-%m-%d %H:%M:%S" --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n""          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)"'
 
 #to open vi IMproved when use command "vi/vim"
-alias vi='vim'
+#alias vi='vim'
