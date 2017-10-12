@@ -5,7 +5,6 @@
 ;; You may delete these explanatory comments.
 
 
-
 ;;set defoult theme
 (load-theme 'wombat t)
 
@@ -54,12 +53,13 @@
 ;;auto complete
 ;;(auto-complete-mode)
 ;;(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
-(define-key ac-mode-map (kbd "M-TAB") 'company-mode)
+(add-hook 'after-init-hook 'global-company-mode)
+(global-set-key (kbd "M-<tab>") 'company-mode)
 
 
 
-
-
+;;evaluate smex
+(global-set-key (kbd "M-x") 'smex)
 
 ;;beacon mode to don't lose my cursor
 (beacon-mode 1)
@@ -68,13 +68,30 @@
 
 ;;make multiple cursore
 (global-set-key (kbd "C-c c") 'multiple-cursors-mode)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "M->") 'mc/unmark-next-like-this)
-(global-set-key (kbd "M-<") 'mc/unmark-previous-like-this)
+(global-set-key (kbd "C-0") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-9") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-)") 'mc/unmark-next-like-this)
+(global-set-key (kbd "C-(") 'mc/unmark-previous-like-this)
 
 
-;;set undo-tree shurt-cuts
+;;flyspell-mode to wrong words in all buffer
+(global-set-key (kbd "M-6") 'flyspell-mode)
+(global-set-key (kbd "M-7") 'flyspell-buffer)
+(global-set-key (kbd "M-8") 'flyspell-auto-correct-word)
+(global-set-key (kbd "M-5") 'ispell)
+(global-set-key (kbd "M-4") 'ispell-word)
+
+
+
+
+
+
+
+
+
+
+
+;;Set undo-tree shurt-cuts
 (global-undo-tree-mode)
 (global-set-key (kbd "M-/") 'undo-tree-visualize)
 
