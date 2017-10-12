@@ -19,6 +19,12 @@ PS1="$purple\u$green\$(__git_ps1)$blue \W \$ $reset"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias netbeans='/usr/local/netbeans-8.0.2/bin/./netbeans &'
+alias eclipse='/home/moroclash/eclipse/java-oxygen/eclipse/./eclipse &'
+alias hotspot1='sudo /home/moroclash/Program/create_ap-master/./create_ap wlp2s0 enp1s0 moro 12345678'
+alias hotspot2='sudo /home/moroclash/Program/create_ap-master/./create_ap wlp2s0 wlp2s0 moro 12345678'
+alias octave-ter='octave --no-gui'
+
 
 ##my conf to open folders
 #alias me='cd /run/media/moroclash/computer\ scince/'
@@ -49,3 +55,6 @@ alias gitl='git log --graph --abbrev-commit --decorate --date=format:"%Y-%m-%d %
 
 #to open vi IMproved when use command "vi/vim"
 #alias vi='vim'
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/home/moroclash/anaconda3/bin:$PATH"
