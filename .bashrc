@@ -27,14 +27,17 @@ alias octave-ter='octave --no-gui'
 
 
 ##my conf to open folders
-#alias me='cd /run/media/moroclash/computer\ scince/'
-#alias meo='xdg-open /run/media/moroclash/computer\ scince/'
-#alias me1='cd /run/media/moroclash/computer\ scince/CS/1/'
-#alias me1o='xdg-open /run/media/moroclash/computer\ scince/CS/1/'
-#alias me2='cd /run/media/moroclash/computer\ scince/CS/2/'
-#alias me2o='xdg-open /run/media/moroclash/computer\ scince/CS/2/'
-#alias me3='cd /run/media/moroclash/computer\ scince/CS/3/'
-#alias me3o='xdg-open /run/media/moroclash/computer\ scince/CS/3/'
+alias me='cd /home/moroclash/Desktop/cs/CS/'
+alias meo='nautilus /home/moroclash/Desktop/cs/CS/'
+alias me1='cd /home/moroclash/Desktop/cs/CS/1/'
+alias me1o='nautilus /home/moroclash/Desktop/cs/CS/1/'
+alias me2='cd /home/moroclash/Desktop/cs/CS/2/'
+alias me2o='nautilus /home/moroclash/Desktop/cs/CS/2/'
+alias me3='cd /home/moroclash/Desktop/cs/CS/3/'
+alias me3o='nautilus /home/moroclash/Desktop/cs/CS/3/'
+alias me4='cd /home/moroclash/Desktop/cs/CS/4/'
+alias me4o='nautilus /home/moroclash/Desktop/cs/CS/4/'
+
 
 ##apache conf
 #alias apache-start='cd /usr/local/apache/bin/; sudo ./apachectl start'
