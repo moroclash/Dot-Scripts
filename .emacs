@@ -5,8 +5,36 @@
 ;; You may delete these explanatory comments.
 
 
+;; add melpa and marmalade repo 
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+(package-initialize)
+
+
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar myPackages
+  '(better-defaults
+    elpy
+    ein 
+    flycheck
+    py-autopep8
+    material-theme))
+
+(mapc #'(lambda (package)
+    (unless (package-installed-p package)
+      (package-install package)))
+      myPackages)
+
+
+
+
 ;;set defoult theme
-(load-theme 'wombat t)
+(load-theme 'material t)
 
 ;;set defoult name to emacs
 (setq frame-title-format "emacs")
@@ -35,14 +63,29 @@
 (line-number-mode)
 
 
+;;enable elpy package for python development
+(elpy-enable)
+
+;;to enable ien
+(elpy-use-ipython)
+
+;;(require 'ein)
+
+;;to deactivate elpy defoult package for syntax checking called flymake
+;; and activate package flycheck for realtime checkin
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 
-;; add melpa and marmalade repo 
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
-(package-initialize)
+;;to evaluate pep8 when press "c-x c-s" to reformate the code
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
+
+
+
+
 
 ;;set line numbers
 (global-set-key (kbd "C-c n") 'nlinum-mode)
@@ -114,12 +157,12 @@
  '(column-number-mode t)
  '(custom-safe-themes
    (quote
-    ("1db337246ebc9c083be0d728f8d20913a0f46edc0a00277746ba411c149d7fe5" "938d8c186c4cb9ec4a8d8bc159285e0d0f07bad46edf20aa469a89d0d2a586ea" default)))
+    ("5dc0ae2d193460de979a463b907b4b2c6d2c9c4657b2e9e66b8898d2592e3de5" "98cc377af705c0f2133bb6d340bf0becd08944a588804ee655809da5d8140de6" "1db337246ebc9c083be0d728f8d20913a0f46edc0a00277746ba411c149d7fe5" "938d8c186c4cb9ec4a8d8bc159285e0d0f07bad46edf20aa469a89d0d2a586ea" default)))
  '(global-hl-line-mode t)
  '(line-number-mode t)
  '(package-selected-packages
    (quote
-    (pdf-tools company multiple-cursors beacon focus neotree ample-zen-theme ample-theme smartparens autopair nlinum auto-complete smex switch-window undo-tree helm ##)))
+    (elpy better-defaults material-theme pdf-tools company multiple-cursors beacon focus neotree ample-zen-theme ample-theme smartparens autopair nlinum auto-complete smex switch-window undo-tree helm ##)))
  '(show-paren-mode nil)
  '(winner-mode t))
 (custom-set-faces
