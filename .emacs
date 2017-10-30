@@ -67,7 +67,7 @@
 (elpy-enable)
 
 ;;to enable ien
-(elpy-use-ipython)
+;;(elpy-use-ipython)
 
 ;;(require 'ein)
 
