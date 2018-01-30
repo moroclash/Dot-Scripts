@@ -13,7 +13,6 @@
 (package-initialize)
 
 
-
 (when (not package-archive-contents)
   (package-refresh-contents))
 
@@ -83,7 +82,7 @@
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 
-
+(setq backup-directory-alist `(("." . "~/.emacs_saves")))
 
 
 
@@ -100,6 +99,8 @@
 (global-set-key (kbd "M-<tab>") 'company-mode)
 
 
+;;revers buffer
+(global-set-key (kbd "C-c r") 'revert-buffer)
 
 ;;evaluate smex
 (global-set-key (kbd "M-x") 'smex)
@@ -141,6 +142,11 @@
 ;;set switch-windo cuts
 (global-set-key (kbd "C-.") 'switch-window)
 ;;(global-set-key (Kbd "C->") 'ace-jump-mode)
+
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
 
 
 ;;set auto complete for (),"",''

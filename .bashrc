@@ -1,3 +1,6 @@
+#hadoop command.
+source ~/Program/hadoop2/commands.sh
+
 # Enable tab completion
 source ~/git-completion.bash
 
@@ -52,12 +55,17 @@ alias me4o='nautilus /home/moroclash/Desktop/cs/CS/4/'
 #this to reopening the log files
 #alias nginx-reopen='cd /usr/local/nginx/sbin/; sudo ./nginx -s reopen'
 
+#resize tmp folder
+alias rstmp='sudo mount -o remount,size=5G,noatime /tmp'
+
+#refresh arch keys
+alias rfkeys='sudo pacman-key --refresh-keys'
 
 #git shourt cuts
 alias gitl='git log --graph --abbrev-commit --decorate --date=format:"%Y-%m-%d %H:%M:%S" --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n""          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)"'
 
 #to open vi IMproved when use command "vi/vim"
-#alias vi='vim'
+alias vi='vim'
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/home/moroclash/anaconda3/bin:$PATH"
