@@ -1,4 +1,3 @@
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -7,7 +6,11 @@
 
 ;; add melpa and marmalade repo 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+ )
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 (package-initialize)
@@ -22,6 +25,10 @@
     ein 
     flycheck
     py-autopep8
+    smex
+    beacon
+    undo-tree
+    autopair
     material-theme))
 
 (mapc #'(lambda (package)
@@ -168,7 +175,7 @@
  '(line-number-mode t)
  '(package-selected-packages
    (quote
-    (elpy better-defaults material-theme pdf-tools company multiple-cursors beacon focus neotree ample-zen-theme ample-theme smartparens autopair nlinum auto-complete smex switch-window undo-tree helm ##)))
+    (web-completion-data web-beautify ensime web-mode lua-mode elpy better-defaults material-theme pdf-tools company multiple-cursors beacon focus neotree ample-zen-theme ample-theme smartparens autopair nlinum auto-complete smex switch-window undo-tree helm ##)))
  '(show-paren-mode nil)
  '(winner-mode t))
 (custom-set-faces
