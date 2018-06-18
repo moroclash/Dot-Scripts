@@ -1,0 +1,38 @@
+#decrease sound
+"(amixer set Master 10%-)"
+   m:0x10 + c:122
+   Mod2 + XF86AudioLowerVolume
+
+
+#incease sound
+"(amixer set Master 10%+)"
+   m:0x10 + c:123
+   Mod2 + XF86AudioRaiseVolume
+
+
+
+#mute and unmute sound
+"(amixer set Master toggle)"
+   m:0x14 + c:9
+   Control+Mod2 + Escape
+
+
+#screenshot for area of screan
+"(gnome-screenshot -a; mv /home/moroclash/Screenshot* /home/moroclash/screenshots/;)"
+   m:0x14 + c:80
+   Control+Mod2 + KP_Up
+
+
+#screenshot for area of screan
+"(gnome-screenshot; mv /home/moroclash/Screenshot* /home/moroclash/screenshots/;)"
+   m:0x14 + c:81
+   Control+Mod2 + KP_Prior
+
+
+#to open termite terminal elimonator
+"(termite)"
+   m:0x18 + c:36
+   Alt+Mod2 + Return
+
+
+
