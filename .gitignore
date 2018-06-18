@@ -1,6 +1,4 @@
 *
-!git-prompt.sh
-!git-completion.bash
 !.bashrc
 !.gitignore
 !.gitconfig
@@ -10,4 +8,6 @@
 !.bindkeysrc
 !.emacs
 !.config/*
+!.rtorrent.rc
+!.xbindkeysrc
 
