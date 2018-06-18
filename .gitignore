@@ -4,9 +4,10 @@
 !.bashrc
 !.gitignore
 !.gitconfig
-!.scripts/
+!.scripts/*
 !.Xresources
 !.xinitrc
 !.bindkeysrc
 !.emacs
+!.config/*
 
