@@ -1,0 +1,89 @@
+how to install arch linux (hand-crafted steps)
+Official Gouid :: https://wiki.archlinux.org/index.php/installation_guide
+
+*Note should be connect with network using wire
+ if plugin the wire after starting Arch you should restart dhcpcd servise using this
+ - 'systemctl restart dhcpcd@enp1s0.service'
+
+1- Download arch iso image
+
+2- Boot it on CD or FlashDisk
+
+3- Start arch
+
+4- choice Arck 64 or 32 ... as you want 
+
+5- run  "fdisk -l"  ......... to list your disks 
+
+6- exist many program in arck to Partitioning HDD ... but we will use "cfdisk"
+	u can start this program using "cfdisk"
+
+
+7- firest choice "Bios"
+	step 1 : partitioning the HDD 
+		* firest part for Root ..... it should be large .. becouse it will have all your files
+			it's "primary"  ..... and make it "bootabole" becouse it will use to boot OS 
+		* secound part for SWap ...........it should be 100% or 50% of Ram amount 
+			it's "primary"
+		* this optional -- you can make "Extend Partiton" that make you able to create logical parts
+			you can make /Home dir as new Logical partion    
+
+8- you should formate this patitions ..... 
+	- "mkfs.ext4 /dev/sda1"    ..... sda is a patition if root
+	- "mkswap /dev/sad2"  .... to defie swaap partion
+	- "swapon /dev/sad2"  .... to mount it 
+
+
+
+8 - should connect the root partition with system root file
+	- "mount /dev/sad1 /mnt"
+
+
+9- should install "base base-devel"   it's scripts to download libraries and base files 
+	- "pacstrap /mnt base base-devel"
+
+
+10 - "genfstab -U -p /mnt >> /mnt/etc/fstab"
+	- it use to generate fstab file autoaticly that's use to manage partitions using UUID that generate HashID for every Partition to Distinguish it .....
+          unless bresk or doublecate .
+
+- to be shoure use this "cat /mnt/etc/fstab"
+
+
+
+11- "arch-chroot /mnt" ..... to change root folder to /mnt
+
+
+12- install grub ..... it's bootable program or program used to make boot when Start OS (boot loader)
+	download -"pacman -S grub"   ... if u use doule boot on your pc ..... "pacman -S grub os-prober"
+	install -"grub-install  /dev/sda"
+	update -"grub-mkconfig > /boot/grub/grub.cfg"
+
+       note : os-prober : it show if pc has another os or not
+	      grub : it's boot loader that make u choise os that u need
+	
+	      if u make it a Doul boot u should make that to make grub show the another os's 
+	      - u should create folder inside "/boot" and name it as u want
+	      - mount the /dev/sdaX with it like that ..... "mount /dev/sdaX /boot/folder-name" 
+			sdaX : is a boot manager of OS that u want it is important to apears in grub .... show it using -"lsblk" or -"fdisk -l"
+			make one for windows and one for Arch
+	      - generate grub-confg another time  - "grub-mkconfig > /boot/grub/grub.cfg"
+	      
+
+13- setup the  langouge of keyboard 
+	-"vi /etc/locale.gen"........remove "#" simpole from whhat langouage u need	 
+	-"locale-gen"  ..... to active the langouages that u choiced
+
+
+14- setup location 
+	-"ls /usr/share/zoneinfo/"  .... u will show all zones that exist
+	-"ls /usr/share/zoneinfo/Africa" ........ u will show countries
+	-"ln -sf /usr/share/zoneinfo/Africa/Egypt etc/localetime"
+	-"hwclock --systohc"
+
+
+15- change root password
+	-"passwd root"
+
+16- restart Pc
+	-"reboot"
