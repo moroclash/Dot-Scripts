@@ -7,6 +7,9 @@ alias hotspot2='sudo /home/moroclash/Program/create_ap-master/./create_ap wlp2s0
 alias octave-ter='octave --no-gui'
 
 
+#wired network
+alias wired-nw='sudo systemctl restart dhcpcd@enp1s0.service'
+
 ##my conf to open folders
 alias me='cd /home/moroclash/Desktop/cs/CS/'
 alias meo='nautilus /home/moroclash/Desktop/cs/CS/'
