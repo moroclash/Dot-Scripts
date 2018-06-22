@@ -29,6 +29,7 @@
     beacon
     undo-tree
     autopair
+    nlinum
     material-theme))
 
 (mapc #'(lambda (package)
