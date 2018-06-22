@@ -7,7 +7,7 @@
 !.xinitrc
 !.bindkeysrc
 !.emacs
-!.config/*
+!.config/awesome/*
 !.rtorrent.rc
 !.xbindkeysrc
 !.Arch-installation/*

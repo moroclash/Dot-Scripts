@@ -30,7 +30,8 @@
     undo-tree
     autopair
     nlinum
-    material-theme))
+    material-theme
+    multiple-cursors))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
@@ -176,7 +177,7 @@
  '(line-number-mode t)
  '(package-selected-packages
    (quote
-    (web-completion-data web-beautify ensime web-mode lua-mode elpy better-defaults material-theme pdf-tools company multiple-cursors beacon focus neotree ample-zen-theme ample-theme smartparens autopair nlinum auto-complete smex switch-window undo-tree helm ##)))
+    (flyspell-lazy web-completion-data web-beautify ensime web-mode lua-mode elpy better-defaults material-theme pdf-tools company multiple-cursors beacon focus neotree ample-zen-theme ample-theme smartparens autopair nlinum auto-complete smex switch-window undo-tree helm ##)))
  '(show-paren-mode nil)
  '(winner-mode t))
 (custom-set-faces

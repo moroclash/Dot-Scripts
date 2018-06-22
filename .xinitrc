@@ -50,7 +50,7 @@ fi
 
 #to enable switch  keyboar layout us,ara
 setxkbmap -model pc104 -layout us,ara -variant ,qwerty -option grp:alt_space_toggle &
-# ot make increase mouse speed
+ # ot make increase mouse speed
 xinput set-prop 11 'Synaptics Move Speed' 2.000000 3.750000 0.097460 0.000000 &
 #to make touchbad click work
 xinput set-prop 11 'Synaptics Tap Action' 1 1 1 1 1 1 1 &
