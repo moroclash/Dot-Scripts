@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #test .sh script
-Testfile="../test/test1.txt"
+Testfile="../test/test.text"
 
 #touch $Testfile
 #echo "hellow" >> $Testfile
@@ -9,10 +9,12 @@ Testfile="../test/test1.txt"
 #echo "finished"
 #echo $Testfile
 
-Testfile="hello"
+#Testfile="hello"
 #echo $Testfile " aaaa"
 #echo "adding hostname as '"$Testfile"'"
 
 echo "Adding new user '"${Testfile}"'"
 
-
+echo "[archlinuxfr]
+SigLevel=Never
+Server=http://repo.archlinux.fr/$arch" >>  $Testfile
