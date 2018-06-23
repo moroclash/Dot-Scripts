@@ -7,6 +7,7 @@ source ~/.scripts/git-completion.bash
 # Enable My alies's
 source ~/.scripts/my-alias.sh
 
+
 # colors!
 green="\[\033[0;32m\]"
 blue="\[\033[0;36m\]"
