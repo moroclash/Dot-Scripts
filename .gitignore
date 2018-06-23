@@ -2,13 +2,13 @@
 !.bashrc
 !.gitignore
 !.gitconfig
-!.scripts/*
 !.Xresources
 !.xinitrc
 !.bindkeysrc
 !.emacs
-!.config/awesome/*
-!.config/termite/*
 !.rtorrent.rc
 !.xbindkeysrc
 !.Arch-installation/*
+!.scripts/*
+!.config/awesome/*
+!.config/termite/*
