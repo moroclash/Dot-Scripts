@@ -22,10 +22,11 @@ function install(){
     yes | sudo pacman -S xorg-server xorg-xinit 
     sudo pacman -S  xorg-drivers
     yes | sudo pacman -S  git bash-completion
-    yes | pacman -S awesome lxdm alsa-utils xf86-video-ati xdg-user-dirs
-    yes | pacman -S adobe-source-code-pro-fonts
-    yes |  pacman -S exfat-utils gedit emacs nfs-utils cifs-utils
+    yes | sudo pacman -S awesome lxdm alsa-utils xf86-video-ati xdg-user-dirs
+    yes | sudo pacman -S adobe-source-code-pro-fonts
+    yes | sudo pacman -S exfat-utils gedit emacs nfs-utils cifs-utils vlc xdg-utils perl-file-mimeinfo pamixer nautilus termite genius speedtest-cli create_ap
     yes | sudo pacman -S a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore flashplugin libdvdcss libdvdread libdvdnav  dvd+rw-tools dvdauthor dvgrab
+    yes | sudo pacman -S xorg-xkill 
 }
 
 if install ; then # TRY
@@ -34,6 +35,8 @@ else # CATCH
     echo "check the your PackageManager  :("
 fi
 ###################################
+
+
 
 ###################################
 #run some commands after-installation
@@ -49,7 +52,7 @@ function running(){
     echo "[archlinuxfr]
 SigLevel=Never
 Server=http://repo.archlinux.fr/$arch" >>  $Testfile
-    
+
 }
 
 if running ; then # TRY
