@@ -18,10 +18,14 @@ echo "adding hostname as '"$myname"'"
 ###################################
 echo "install display manager and some packages......."
 function install(){
+    yes | sudo pacman -Syy
     yes | sudo pacman -S xorg-server xorg-xinit 
     sudo pacman -S  xorg-drivers
     yes | sudo pacman -S  git bash-completion
     yes | pacman -S awesome lxdm alsa-utils xf86-video-ati xdg-user-dirs
+    yes | pacman -S adobe-source-code-pro-fonts
+    yes |  pacman -S exfat-utils gedit emacs nfs-utils cifs-utils
+    yes | sudo pacman -S a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore flashplugin libdvdcss libdvdread libdvdnav  dvd+rw-tools dvdauthor dvgrab
 }
 
 if install ; then # TRY
@@ -32,12 +36,20 @@ fi
 ###################################
 
 ###################################
-#run some commands
+#run some commands after-installation
 ###################################
 echo "run some commands ......."
 function running(){
+    #to change dir's names of home in file manger 
     xdg-user-dirs-update
-    sed -i 's/#\[multilib\]/\[multilib\]/' /etc/pacman.conf 
+    #ro remove # from multilib from packman lists
+    sed -i 'N;s/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/'  /etc/packman.conf
+
+    #adding fr repo as pacman mirrors
+    echo "[archlinuxfr]
+SigLevel=Never
+Server=http://repo.archlinux.fr/$arch" >>  $Testfile
+    
 }
 
 if running ; then # TRY
