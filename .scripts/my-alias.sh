@@ -2,8 +2,8 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias netbeans='/usr/local/netbeans-8.0.2/bin/./netbeans &'
 alias eclipse='/home/moroclash/eclipse/java-oxygen/eclipse/./eclipse &'
-alias hotspot1='sudo /home/moroclash/Program/create_ap-master/./create_ap wlp2s0 enp1s0 moro 12345678'
-alias hotspot2='sudo /home/moroclash/Program/create_ap-master/./create_ap wlp2s0 wlp2s0 moro 12345678'
+alias hotspot1='sudo create_ap wlp2s0 enp1s0 moro 12345678'
+alias hotspot2='sudo create_ap wlp2s0 wlp2s0 moro 12345678'
 alias octave-ter='octave --no-gui'
 
 
