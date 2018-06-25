@@ -8,7 +8,7 @@ myname="moroclash"
 echo "change hostname ........."
 hostname="/etc/hostname"
 >  $hostname
-echo $myname >> $hostname
+echo $myname | sudo tee -a $hostname
 echo "adding hostname as '"$myname"'"
 ###################################
 
@@ -46,12 +46,12 @@ function running(){
     #to change dir's names of home in file manger 
     xdg-user-dirs-update
     #ro remove # from multilib from packman lists
-    sed -i 'N;s/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/'  /etc/packman.conf
+    sudo sed -i 'N;s/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/'  /etc/packman.conf
 
     #adding fr repo as pacman mirrors
-    sudo echo "[archlinuxfr]
+    echo "[archlinuxfr]
 SigLevel=Never
-Server=http://repo.archlinux.fr/$arch" >>  /etc/pacman.conf 
+Server=http://repo.archlinux.fr/$arch" | sudo tee -a  /etc/pacman.conf 
 
     #to hidden grup menu and appeare when hold on shift key
     echo  "GRUB_FORCE_HIDDEN_MENU=\"true\"" | sudo tee -a /etc/default/grub
@@ -76,7 +76,7 @@ fi
 ###################################
 useradd -m -g users -G adm,lp,scanner,audio,video,network,wheel,power,optical,storage,sys -s /bin/bash  $myname
 passed omar
-echo $myname "ALL=(ALL) ALL" >> /etc/sudors
+echo $myname "ALL=(ALL) ALL" | sudo tee -a /etc/sudors
 echo "Adding new user '"${myname}"'"
 ###################################
 
