@@ -27,5 +27,6 @@ cd ~
 rm -rf Dot-Scripts 
 
 
+mkdir ~/screenshots/
 #make default terminal show .bashrc
-sudo  echo "source  ~/.bashrc " >> /etc/profile
+echo "source  ~/.bashrc " |sudo tee -a /etc/profile

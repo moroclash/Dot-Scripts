@@ -18,13 +18,13 @@
 
 
 #screenshot for area of screan
-"(gnome-screenshot -a; mv /home/moroclash/Screenshot* /home/moroclash/screenshots/;)"
+"(gnome-screenshot -a; mv /home/moroclash/Pictures/Screenshot* /home/moroclash/screenshots/;)"
    m:0x14 + c:80
    Control+Mod2 + KP_Up
 
 
 #screenshot for area of screan
-"(gnome-screenshot; mv /home/moroclash/Screenshot* /home/moroclash/screenshots/;)"
+"(gnome-screenshot; mv /home/moroclash/Pictures/Screenshot* /home/moroclash/screenshots/;)"
    m:0x14 + c:81
    Control+Mod2 + KP_Prior
 
