@@ -82,3 +82,14 @@ echo "Adding new user '"${myname}"'"
 
 
 
+
+
+###################################
+#set Time Zone
+###################################
+timedatectl set-timezone Africa/Cairo
+sudo ln -sf /usr/share/zoneinfo/Africa/Cairo /etc/localtime
+echo "set Time zone Cairo"
+###################################
+
+
