@@ -21,7 +21,7 @@ function install(){
     yes | sudo pacman -Syy
     yes | sudo pacman -S xorg-server xorg-xinit 
     sudo pacman -S  xorg-drivers
-    yes | sudo pacman -S  git bash-completion
+    yes | sudo pacman -S  git bash-completion wget
     yes | sudo pacman -S awesome lxdm alsa-utils xf86-video-ati xdg-user-dirs
     yes | sudo pacman -S adobe-source-code-pro-fonts
     yes | sudo pacman -S exfat-utils gedit emacs nfs-utils cifs-utils vlc xdg-utils perl-file-mimeinfo pamixer nautilus termite genius speedtest-cli create_ap
@@ -49,10 +49,17 @@ function running(){
     sed -i 'N;s/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/'  /etc/packman.conf
 
     #adding fr repo as pacman mirrors
-    echo "[archlinuxfr]
+    sudo echo "[archlinuxfr]
 SigLevel=Never
-Server=http://repo.archlinux.fr/$arch" >>  $Testfile
+Server=http://repo.archlinux.fr/$arch" >>  /etc/pacman.conf 
 
+    #to hidden grup menu and appeare when hold on shift key
+    echo  "GRUB_FORCE_HIDDEN_MENU=\"true\"" | sudo tee -a /etc/default/grub
+    wget https://gist.githubusercontent.com/anonymous/8eb2019db2e278ba99be/raw/257f15100fd46aeeb8e33a7629b209d0a14b9975/gistfile1.sh
+    cat gistfile1.sh | sudo tee /etc/grub.d/holdshift
+    sudo chmod a+x /etc/grub.d/holdshift
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+    rm gistfile1.sh
 }
 
 if running ; then # TRY
