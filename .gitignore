@@ -10,5 +10,6 @@
 !.xbindkeysrc
 !/.Arch-installation/
 !/.scripts/
+/.config/*
 !/.config/awesome
 !/.config/termite
