@@ -22,7 +22,7 @@ function install(){
     yes | sudo pacman -S xorg-server xorg-xinit 
     sudo pacman -S  xorg-drivers
     yes | sudo pacman -S  git bash-completion wget
-    yes | sudo pacman -S awesome lxdm alsa-utils xf86-video-ati xdg-user-dirs
+    yes | sudo pacman -S awesome lxdm alsa-utils xf86-video-ati xdg-user-dirs aspell-en
     yes | sudo pacman -S adobe-source-code-pro-fonts gnome-screenshot
     yes | sudo pacman -S exfat-utils gedit emacs nfs-utils cifs-utils vlc xdg-utils perl-file-mimeinfo pamixer nautilus termite genius speedtest-cli create_ap
     yes | sudo pacman -S a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore flashplugin libdvdcss libdvdread libdvdnav  dvd+rw-tools dvdauthor dvgrab
