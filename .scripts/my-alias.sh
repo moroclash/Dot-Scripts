@@ -7,20 +7,24 @@ alias hotspot2='sudo create_ap wlp2s0 wlp2s0 moro 12345678'
 alias octave-ter='octave --no-gui'
 
 
+
 #wired network
 alias wired-nw='sudo systemctl restart dhcpcd@enp1s0.service'
 
+
 ##my conf to open folders
-alias me='cd /home/moroclash/Desktop/cs/CS/'
-alias meo='nautilus /home/moroclash/Desktop/cs/CS/'
-alias me1='cd /home/moroclash/Desktop/cs/CS/1/'
-alias me1o='nautilus /home/moroclash/Desktop/cs/CS/1/'
-alias me2='cd /home/moroclash/Desktop/cs/CS/2/'
-alias me2o='nautilus /home/moroclash/Desktop/cs/CS/2/'
-alias me3='cd /home/moroclash/Desktop/cs/CS/3/'
-alias me3o='nautilus /home/moroclash/Desktop/cs/CS/3/'
-alias me4='cd /home/moroclash/Desktop/cs/CS/4/'
-alias me4o='nautilus /home/moroclash/Desktop/cs/CS/4/'
+alias mme='sudo mount /dev/sdb1 /home/moroclash/Desktop/mydata/; sudo mount /dev/sdb2 /home/moroclash/Desktop/cs/; sudo chmod -R 755 /home/moroclash/Desktop/mydata/; sudo chmod -R 755 /home/moroclash/Desktop/cs/;'
+alias ume='sudo umount /home/moroclash/Desktop/mydata/; sudo umount /home/moroclash/Desktop/cs'
+alias me='cd /home/moroclash/Desktop/cs/cs/'
+alias meo='nautilus /home/moroclash/Desktop/cs/cs/'
+alias me1='cd /home/moroclash/Desktop/cs/cs/1/'
+alias me1o='nautilus /home/moroclash/Desktop/cs/cs/1/'
+alias me2='cd /home/moroclash/Desktop/cs/cs/2/'
+alias me2o='nautilus /home/moroclash/Desktop/cs/cs/2/'
+alias me3='cd /home/moroclash/Desktop/cs/cs/3/'
+alias me3o='nautilus /home/moroclash/Desktop/cs/cs/3/'
+alias me4='cd /home/moroclash/Desktop/cs/cs/4/'
+alias me4o='nautilus /home/moroclash/Desktop/cs/cs/4/'
 
 
 ##apache conf
@@ -47,3 +51,4 @@ alias gitl='git log --graph --abbrev-commit --decorate --date=format:"%Y-%m-%d %
 
 #to open vi IMproved when use command "vi/vim"
 alias vi='vim'
+alias l='ls'
