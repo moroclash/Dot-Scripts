@@ -13,7 +13,7 @@ alias wired-nw='sudo systemctl restart dhcpcd@enp1s0.service'
 
 
 ##my conf to open folders
-alias mme='sudo mount /dev/sdb1 /home/moroclash/Desktop/mydata/; sudo mount /dev/sdb2 /home/moroclash/Desktop/cs/; sudo chmod -R 755 /home/moroclash/Desktop/mydata/; sudo chmod -R 755 /home/moroclash/Desktop/cs/;'
+alias mme='sudo mount -t ntfs-3g -o uid=$(id -u) /dev/sdb1 /home/moroclash/Desktop/mydata/; sudo mount -t ntfs-3g -o uid=$(id -u) /dev/sdb2  /home/moroclash/Desktop/cs/'
 alias ume='sudo umount /home/moroclash/Desktop/mydata/; sudo umount /home/moroclash/Desktop/cs'
 alias me='cd /home/moroclash/Desktop/cs/cs/'
 alias meo='nautilus /home/moroclash/Desktop/cs/cs/'
