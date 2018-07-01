@@ -55,6 +55,10 @@ xinput set-prop 11 'Synaptics Move Speed' 2.000000 3.750000 0.097460 0.000000 &
 #to make touchbad click work
 xinput set-prop 11 'Synaptics Tap Action' 1 1 1 1 1 1 1 &
 
+#mute beep terminal sound
+xset b off
+
+
 #to run xbindkeys
 xbindkeys &
 
