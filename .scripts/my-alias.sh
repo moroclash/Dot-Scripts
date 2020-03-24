@@ -41,7 +41,7 @@ alias me4o='nautilus /home/moroclash/Desktop/cs/cs/4/'
 #alias nginx-reopen='cd /usr/local/nginx/sbin/; sudo ./nginx -s reopen'
 
 #resize tmp folder
-alias rstmp='sudo mount -o remount,size=5G,noatime /tmp'
+alias rstmp='sudo mount -o remount,size=8G,noatime /tmp'
 
 #refresh arch keys
 alias rfkeys='sudo pacman-key --refresh-keys'
@@ -52,3 +52,15 @@ alias gitl='git log --graph --abbrev-commit --decorate --date=format:"%Y-%m-%d %
 #to open vi IMproved when use command "vi/vim"
 alias vi='vim'
 alias l='ls'
+
+
+
+#android paths
+export ANDROID_HOME=~/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:~/program/flutter/bin
+export JAVA_HOME=~/program/android-studio/jre
+export PATH=$HOME/.dotnet/tools:$PATH
+alias android-linux='mkdir android/app/src/main/assets& react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res&'
