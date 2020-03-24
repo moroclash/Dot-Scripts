@@ -24,3 +24,4 @@ PS1="$purple\u$green\$(__git_ps1)$blue \W \$ $reset"
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/home/moroclash/anaconda3/bin:$PATH"
+export PATH=~/.npm-global/bin:$PATH
