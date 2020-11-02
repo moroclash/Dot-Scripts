@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #to append my Scripts in there place automaticly
-cd ~
-git clone https://github.com/moroclash/Dot-Scripts.git
-cd Dot-Scripts
+#cd ~
+#git clone https://github.com/moroclash/Dot-Scripts.git
+#cd Dot-Scripts
 git checkout  Arch-Linux-Config 
 mv .Arch-installation ~
 mv .scripts ~

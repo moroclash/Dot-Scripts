@@ -7,6 +7,7 @@ alias hotspot2='sudo create_ap wlp2s0 wlp2s0 moro 12345678'
 alias octave-ter='octave --no-gui'
 
 
+alias zoom='~/program/zoom_x86_64.pkg/opt/zoom/ZoomLauncher'
 
 #wired network
 alias wired-nw='sudo systemctl restart dhcpcd@enp1s0.service'
