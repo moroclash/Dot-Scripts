@@ -53,7 +53,7 @@ alias gitl='git log --graph --abbrev-commit --decorate --date=format:"%Y-%m-%d %
 #to open vi IMproved when use command "vi/vim"
 alias vi='vim'
 alias l='ls'
-
+alias lspro='pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -hr | head -25'
 
 
 #android paths
